@@ -7,7 +7,6 @@ import 'react-dates/lib/css/_datepicker.css';
 export default class ExpenseForm extends Component {
    constructor(props) {
       super(props);
-      console.log(props);
 
       this.state = {
          description: props.expense ? props.expense.description : '',
