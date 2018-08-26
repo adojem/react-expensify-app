@@ -2,3 +2,5 @@ node_modules/
 yarn-error.log
 public/scripts/app.js
 bundle.js
+styles.css.map
+styles.css
