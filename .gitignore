@@ -1,7 +1,7 @@
 node_modules/
 yarn-error.log
 public/scripts/app.js
-bundle.js
-bundle.js.map
-styles.css.map
-styles.css
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map
