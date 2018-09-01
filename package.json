@@ -9,10 +9,18 @@
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
     "start": "node server/server.js",
-    "heroku-postbuild": "yarn run build:prod"
+    "heroku-postbuild": "yarn run build:prod",
+    "test": "jest"
   },
   "devDependencies": {
     "chalk": "^2.4.1",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.5.0",
+    "prettier-eslint": "^8.8.2",
     "webpack-dev-server": "^3.1.5"
   },
   "dependencies": {
@@ -36,9 +44,9 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
-    "uuid": "^3.3.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.22.1",
+    "uuid": "^3.3.2",
     "validator": "^10.5.0",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0"
