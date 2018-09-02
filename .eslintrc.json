@@ -1,7 +1,8 @@
 {
    "env": {
       "browser": true,
-      "node": true
+      "node": true,
+      "jest": true
    },
    "rules": {
       "indent": ["error", 3, { "SwitchCase": 1}],
