@@ -5,9 +5,16 @@ const Header = () => (
    <header>
       <h1>Expensify</h1>
       <ul>
-         <li><NavLink to="/" exact={true} activeClassName="is-active">Dashboard</NavLink></li>
-         <li><NavLink to="/create" activeClassName="is-active">Create Expense</NavLink></li>
-         <li><NavLink to="/help" activeClassName="is-active">Help</NavLink></li>
+         <li>
+            <NavLink to="/" exact activeClassName="is-active">
+               Dashboard
+            </NavLink>
+         </li>
+         <li>
+            <NavLink to="/create" activeClassName="is-active">
+               Create Expense
+            </NavLink>
+         </li>
       </ul>
    </header>
 );
