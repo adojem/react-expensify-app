@@ -8,7 +8,7 @@ export default class ExpenseForm extends Component {
       super(props);
 
       this.state = {
-         description: props.expense ? props.description : '',
+         description: props.expense ? props.expense.description : '',
          note: props.expense ? props.expense.note : '',
          amount: props.expense ? (props.expense.amount / 100).toString() : '',
          createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
@@ -53,8 +53,8 @@ export default class ExpenseForm extends Component {
          const error = 'Please provide description and amount';
          this.setState(() => ({ error }));
       } else {
-         // Clear the errror
-         this.setState(() => ({ erroe: '' }));
+         // Clear the error
+         this.setState(() => ({ error: '' }));
          this.props.onSubmit({
             description: this.state.description,
             amount: parseFloat(this.state.amount, 10) * 100,
