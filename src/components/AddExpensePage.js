@@ -6,8 +6,8 @@ import { addExpense } from '../actions/expenses';
 
 export class AddExpensePage extends Component {
    onSubmit = (expense) => {
-      const { submitExpense, history } = this.props;
-      submitExpense(expense);
+      const { addExpense, history } = this.props;
+      addExpense(expense);
       history.push('/');
    };
 
@@ -22,7 +22,7 @@ export class AddExpensePage extends Component {
 }
 
 AddExpensePage.propTypes = {
-   submitExpense: PropTypes.func.isRequired,
+   addExpense: PropTypes.func.isRequired,
    history: PropTypes.object.isRequired,
 };
 
