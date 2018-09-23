@@ -1,2 +1,2 @@
 export default expenses =>
-   expenses.map(expense => expense.amount).reduce((prev, next) => prev + next, 0);
+   expenses.map(expense => expense.amount).reduce((sum, value) => sum + value, 0);
