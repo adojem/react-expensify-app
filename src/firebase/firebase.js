@@ -10,7 +10,11 @@ database
    .set({
       name: 'Andrew Mead',
       age: 26,
-      isSingle: false,
+      stressLevel: 6,
+      job: {
+         title: 'Software developer',
+         company: 'Google',
+      },
       location: {
          city: 'Philadelphia',
          country: 'United States',
@@ -23,20 +27,14 @@ database
       console.log('This failed.', e);
    });
 
-// database.ref().set('This is my data.');
+database.ref().update({
+   stressLevel: 9,
+   'job/company': 'Amazon',
+   'location/city': 'Seattle',
+});
 
-// database.ref('age').set(27);
-// database.ref('location/city').set('New York');
-
-database
-   .ref('attributes')
-   .set({
-      height: 73,
-      weight: 150,
-   })
-   .then(() => {
-      console.log('Second set call worked.');
-   })
-   .catch((err) => {
-      console.log('Things didnt for the second error', err);
-   });
+// database
+//    .ref()
+//    .remove()
+//    .then(() => console.log('Data was removed'))
+//    .catch(err => console.log('Did not remove data', err));
