@@ -5,11 +5,13 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
-database.ref('expenses').on('child_removed', snapshot => console.log(snapshot.key, snapshot.val()));
+export { firebase, database as default };
 
-database.ref('expenses').on('child_changed', snapshot => console.log(snapshot.key, snapshot.val()));
+// database.ref('expenses').on('child_removed', snapshot => console.log(snapshot.key, snapshot.val()));
 
-database.ref('expenses').on('child_added', snapshot => console.log(snapshot.key, snapshot.val()));
+// database.ref('expenses').on('child_changed', snapshot => console.log(snapshot.key, snapshot.val()));
+
+// database.ref('expenses').on('child_added', snapshot => console.log(snapshot.key, snapshot.val()));
 
 // database
 //    .ref('expenses')
@@ -40,12 +42,12 @@ database.ref('expenses').on('child_added', snapshot => console.log(snapshot.key,
 //    console.log(expenses);
 // });
 
-database.ref('expenses').push({
-   description: 'Rent',
-   note: '',
-   amount: 109500,
-   createdAt: 976123498763,
-});
+// database.ref('expenses').push({
+//    description: 'Rent',
+//    note: '',
+//    amount: 109500,
+//    createdAt: 976123498763,
+// });
 
 // database.ref('notes').push({
 //    title: 'React Native, Angular, Python',
