@@ -4,3 +4,5 @@ yarn.lock
 public/dist/
 __snapshots__/
 config.js
+.env.test
+.env.development
