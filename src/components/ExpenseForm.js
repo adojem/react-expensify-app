@@ -65,25 +65,29 @@ export default class ExpenseForm extends Component {
    };
 
    render() {
+      const {
+         amount, createdAt, error, description, note,
+      } = this.state;
+
       return (
          <div>
-            {this.state.error && <p style={{ color: 'red' }}>{this.state.error}</p>}
+            {error && <p style={{ color: 'red' }}>{error}</p>}
             <form onSubmit={this.onSubmit}>
                <input
                   type="text"
                   placeholder="Description"
                   autoFocus
-                  value={this.state.description}
+                  value={description}
                   onChange={this.onDescriptionChange}
                />
                <input
                   type="text"
                   placeholder="Amount"
-                  value={this.state.amount}
+                  value={amount}
                   onChange={this.onAmountChange}
                />
                <SingleDatePicker
-                  date={this.state.createdAt}
+                  date={createdAt}
                   onDateChange={this.onDateChange}
                   focused={this.state.calendarFocused}
                   onFocusChange={this.onFocusChange}
@@ -93,6 +97,7 @@ export default class ExpenseForm extends Component {
                <textarea
                   placeholder="Add a note for your expense (optional)"
                   onChange={this.onNoteChange}
+                  value={note}
                />
                <button>Add Expense</button>
             </form>
