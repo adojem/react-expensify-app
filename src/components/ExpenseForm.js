@@ -52,7 +52,8 @@ export default class ExpenseForm extends Component {
       if (!this.state.description || !this.state.amount) {
          const error = 'Please provide description and amount';
          this.setState(() => ({ error }));
-      } else {
+      }
+      else {
          // Clear the error
          this.setState(() => ({ error: '' }));
          this.props.onSubmit({
@@ -74,6 +75,7 @@ export default class ExpenseForm extends Component {
             {error && <p style={{ color: 'red' }}>{error}</p>}
             <form onSubmit={this.onSubmit}>
                <input
+                  className="text-input"
                   type="text"
                   placeholder="Description"
                   autoFocus
@@ -81,6 +83,7 @@ export default class ExpenseForm extends Component {
                   onChange={this.onDescriptionChange}
                />
                <input
+                  className="text-input"
                   type="text"
                   placeholder="Amount"
                   value={amount}
@@ -95,6 +98,7 @@ export default class ExpenseForm extends Component {
                   isOutsideRange={() => false}
                />
                <textarea
+                  className="textarea"
                   placeholder="Add a note for your expense (optional)"
                   onChange={this.onNoteChange}
                   value={note}
