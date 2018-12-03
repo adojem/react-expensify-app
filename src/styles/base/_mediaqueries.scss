@@ -1,5 +1,13 @@
-@mixin min-screen($breakpoint) {
-   @media (min-width: $breakpoint) {
-      @content;
+@mixin respond($breakpoint) {
+   @if $breakpoint == desktop {
+      @media screen and (min-width: $desktop-breakpoint) {
+         @content
+      };
+   }
+
+   @if $breakpoint == mobile {
+      @media screen and (max-width: $desktop-breakpoint - .01rem) {
+         @content
+      };
    }
 }

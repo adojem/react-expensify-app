@@ -3,7 +3,7 @@
    margin-bottom: $m-size;
    flex-direction: column;
 
-   @include min-screen($desktop-breakpoint) {
+   @include respond(desktop) {
       flex-direction: row;
       margin-bottom: $l-size;
    }
@@ -11,7 +11,7 @@
    &__item {
       margin-right: $s-size;
 
-      @include min-screen($desktop-breakpoint) {
+      @include respond(desktop) {
          margin: 0 $s-size 0 0;
       }
    }
